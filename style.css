@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/  */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ====================================================================*/
+
+html {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	width:96vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-top: 1em;
+}
+
+body {
+	width:100%;
+}
+
+h1 {
+	font-size:18px;
+	padding-bottom: 15px;
+	font-weight: bold;
+	display:block;
+}
+
+ul {
+	width:100%;
+	display:grid;
+	grid-row:auto;
+	grid-gap: 5px;
+	grid-template-rows: 50px auto;
+}
+
+li {
+	border: 1px solid white;
+	background-color:peachpuff;
+	display:grid;
+	grid-template-columns: 160px 160px 160px;
+	padding: 5px 0px 5px 10px;
+}
+
+li>span {
+	align-self:center;
+}
+
+li.firstline {
+	border: 1px solid salmon;
+	font-weight: bold;
+}
+  
+li>button {
+	font-size: 12px;
+	margin-left: 20px;
+	color: navy;
+	align-self:center;
+}
+
+.flexcontainer {
+	display: flex;	
+	gap: 5px;
+	justify-content: space-between;
+}
+
+.flexcontainer>* {
+	border: none;
+	align-self: center;
+}
+
+.topright {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid salmon;
+	background-color: peachpuff;
+	font-weight: bold;
+	min-width: 150px;
+}
+
+li#banner {
+	font-weight: bold;
+	color: salmon;
+	text-align: center;
+}
+
+.calc {
+	box-shadow: grey 5px 5px 5px;
+	border: 1px solid darkgray;
+	display:inline-grid;
+	grid-template-columns: repeat(4, 3em);
+	grid-template-rows: repeat(6, 3em);
+	grid-template-areas:
+		"dis dis dis dis"
+		"clr mult div sub"
+		"b07 b08 b09 add"
+		"b04 b05 b06 add"
+		"b01 b02 b03 enter"
+		"b00 b00 period enter";
+	padding: 3px;
+	gap:3px;
+	text-align: center;
+	width: auto;
+}
+
+.calcbutton {
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.calcbutton>span {
+	vertical-align: middle;
+	line-height:3em;
+}
+
+.calcscreen {
+	background-color: rgb(222, 233, 236);
+	border-radius: 5px;
+	display:flex;
+	justify-content: space-around;
+	padding: 5px;
+}	
+
+.calcscreen > * {
+	line-height:2.5em;
+}
+
+
+.calcbutton#b01 {
+	grid-area: b01;
+}
+.calcbutton#b02 {
+	grid-area: b02;
+}
+.calcbutton#b03 {
+	grid-area: b03;
+}
+.calcbutton#b04 {
+	grid-area: b04;
+}
+.calcbutton#b05 {
+	grid-area: b05;
+}
+.calcbutton#b06 {
+	grid-area: b06;
+}
+.calcbutton#b07 {
+	grid-area: b07;
+}
+.calcbutton#b08 {
+	grid-area: b08;
+}
+.calcbutton#b09 {
+	grid-area: b09;
+}
+.calcbutton#b00 {
+	grid-area: b00;
+}
+.calcbutton#add {
+	grid-area: add;
+}
+.calcbutton#sub {
+	grid-area: sub;
+}
+.calcbutton#mult {
+	grid-area: mult;
+}
+.calcbutton#div {
+	grid-area: div;
+}
+.calcbutton#clr {
+	grid-area: clr;
+}
+.calcbutton#enter {
+	grid-area: enter;
+}
+.calcbutton#period {
+	grid-area: period;
+}
+#dis {
+	grid-area: dis;
+}
